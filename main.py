@@ -25,6 +25,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
         await ctx.send(f'Kicked! Member: {discord.member}')
     else:
         await ctx.send("FAILURE DUE TO LACK OF PERMISSION")
+        
 @BotClient.command()
 async def into(ctx, *, member: discord.Member):
     msg = f'{member} joined on {member.joined_at} and has {len(member.roles)} roles.'
